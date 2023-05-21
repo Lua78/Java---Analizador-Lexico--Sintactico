@@ -18,17 +18,19 @@ parser code
 terminal Linea, Comillas, T_dato, Int, Cadena, If, Else, Do, While, For,
     Igual, Suma, Resta, Multiplicacion, Division, Op_logico, Op_relacional,
     Op_atribucion, Op_incremento, Op_booleano, Parentesis_a, Parentesis_c,
-    Llave_a, Llave_c, Corchete_a, Corchete_c, Main,Cout, P_coma, Identificador,
+    Llave_a, Llave_c, Corchete_a, Corchete_c, Main,Cout, P_coma, Identificador,Using,NameSpace, Espacio_de_Nombre, 
     Numero,Palabra,Doble_Menor,Include,Libreria,  ERROR;
-non terminal  INICIO, MAIN , SENTENCIA, DECLARACION, DECLARACION_FOR, IF, IF_ELSE,
+non terminal  INICIO, MAIN , SENTENCIA, DECLARACION,ESPACIOS_NOMBRE, DECLARACION_FOR, IF, IF_ELSE,
     WHILE, DO_WHILE, FOR, SENTENCIA_BOOLEANA, SENTENCIA_FOR, SALIDA;
 
 start with INICIO;
 
 INICIO::=
-    Include Libreria MAIN
+    Include Libreria ESPACIOS_NOMBRE MAIN
 ;
-
+ESPACIOS_NOMBRE::=
+    Using NameSpace Espacio_de_Nombre P_coma
+;
 MAIN ::= 
     Int Main Parentesis_a Parentesis_c Llave_a SENTENCIA Llave_c |
     Main Parentesis_a Parentesis_c Llave_a SENTENCIA Llave_c

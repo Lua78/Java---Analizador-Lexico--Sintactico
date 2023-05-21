@@ -117,6 +117,14 @@ espacio=[ ,\t,\r,\n]+
 /*Librerias*/
 ("<iostream>") {return new Symbol(sym.Libreria, yychar, yyline, yytext());}
 
+/*using*/
+("using") {return new Symbol(sym.Using, yychar, yyline, yytext());}
+
+/*Librerias*/
+("namespace") {return new Symbol(sym.NameSpace, yychar, yyline, yytext());}
+
+/*Librerias*/
+("std") {return new Symbol(sym.Espacio_de_Nombre, yychar, yyline, yytext());}
 
 /* Identificador */
 {L}({L}|{D})* {return new Symbol(sym.Identificador, yychar, yyline, yytext());}

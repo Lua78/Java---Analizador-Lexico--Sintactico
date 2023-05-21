@@ -41,8 +41,11 @@ public enum Tokens {
     Corchete_a,
     Corchete_c,
     Main,
+    NameSpace,
     P_coma,
+    Using,
     Identificador,
     Numero,
+    Espacio_de_Nombre,
     ERROR
 }
