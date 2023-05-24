@@ -105,9 +105,17 @@ espacio=[ ,\t,\r]+
 /*Include*/
 ("#include") {lexeme=yytext(); return Include;}
 
-/* */
+/* Libreria */
 ("<iostream>") {lexeme=yytext(); return Libreria;}
 
+/* Using */
+("using") {lexeme=yytext(); return Using;}
+
+/* Nombre de espacio */
+("namespace") {lexeme=yytext(); return NameSpace;}
+
+/* Espacio std */
+("std") {lexeme=yytext(); return Espacio_de_Nombre;}
 
 /* Identificador */
 {L}({L}|{D})* {lexeme=yytext(); return Identificador;}
