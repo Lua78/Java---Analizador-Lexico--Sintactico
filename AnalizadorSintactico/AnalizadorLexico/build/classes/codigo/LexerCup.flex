@@ -126,6 +126,59 @@ espacio=[ ,\t,\r,\n]+
 /*Librerias*/
 ("std") {return new Symbol(sym.Espacio_de_Nombre, yychar, yyline, yytext());}
 
+("break") {return new Symbol(sym.Break, yychar, yyline, yytext());}
+("bool") {return new Symbol(sym.Bool, yychar, yyline, yytext());}
+("default") {return new Symbol(sym.Default, yychar, yyline, yytext());}
+("case") {return new Symbol(sym.Case, yychar, yyline, yytext());}
+("asm") {return new Symbol(sym.Asm, yychar, yyline, yytext());}
+("catch") {return new Symbol(sym.Catch, yychar, yyline, yytext());}
+("char") {return new Symbol(sym.Char, yychar, yyline, yytext());}
+("class") {return new Symbol(sym.Class, yychar, yyline, yytext());}
+("const") {return new Symbol(sym.Const, yychar, yyline, yytext());}
+("continue") {return new Symbol(sym.Continue, yychar, yyline, yytext());}
+("delete") {return new Symbol(sym.Delete, yychar, yyline, yytext());}
+("dynamic_cast") {return new Symbol(sym.Dynamic_cast, yychar, yyline, yytext());}
+("explicit") {return new Symbol(sym.Explicit, yychar, yyline, yytext());}
+("false") {return new Symbol(sym.False, yychar, yyline, yytext());}
+("friend") {return new Symbol(sym.Friend, yychar, yyline, yytext());}
+("inline") {return new Symbol(sym.Inline, yychar, yyline, yytext());}
+("long") {return new Symbol(sym.Long, yychar, yyline, yytext());}
+("int"){return new Symbol(sym.Int, yychar, yyline, yytext());}
+("mutable") {return new Symbol(sym.Mutable, yychar, yyline, yytext());}
+("new") {return new Symbol(sym.New, yychar, yyline, yytext());}
+("operator") {return new Symbol(sym.Operator, yychar, yyline, yytext());}
+("private") {return new Symbol(sym.Private, yychar, yyline, yytext());}
+("protected") {return new Symbol(sym.Protected, yychar, yyline, yytext());}
+("public") {return new Symbol(sym.Public, yychar, yyline, yytext());}
+("register") {return new Symbol(sym.Register, yychar, yyline, yytext());}
+("reinterpret_cast") {return new Symbol(sym.Reinterpret_cast, yychar, yyline, yytext());}
+("return") {return new Symbol(sym.Return, yychar, yyline, yytext());}
+("short") {return new Symbol(sym.Short, yychar, yyline, yytext());}
+("signed") {return new Symbol(sym.Signed, yychar, yyline, yytext());}
+("sizeof") {return new Symbol(sym.Sizeof, yychar, yyline, yytext());}
+("static") {return new Symbol(sym.Static, yychar, yyline, yytext());}
+("static_cast") {return new Symbol(sym.Static_cast, yychar, yyline, yytext());}
+("struct") {return new Symbol(sym.Struct, yychar, yyline, yytext());}
+("switch") {return new Symbol(sym.Switch, yychar, yyline, yytext());}
+("template") {return new Symbol(sym.Template, yychar, yyline, yytext());}
+("this") {return new Symbol(sym.This, yychar, yyline, yytext());}
+("throw") {return new Symbol(sym.Throw, yychar, yyline, yytext());}
+("try") {return new Symbol(sym.Try, yychar, yyline, yytext());}
+("typedef") {return new Symbol(sym.Typedef, yychar, yyline, yytext());}
+("typeid") {return new Symbol(sym.Typeid, yychar, yyline, yytext());}
+("typename") {return new Symbol(sym.Typename, yychar, yyline, yytext());}
+("union") {return new Symbol(sym.Union, yychar, yyline, yytext());}
+("unsigned") {return new Symbol(sym.Unsigned, yychar, yyline, yytext());}
+("virtual") {return new Symbol(sym.Virtual, yychar, yyline, yytext());}
+("void") {return new Symbol(sym.Void, yychar, yyline, yytext());}
+("volatile") {return new Symbol(sym.Volatile, yychar, yyline, yytext());}
+("wchar_t") {return new Symbol(sym.Wchar_t, yychar, yyline, yytext());}
+(",") {return new Symbol(sym.Coma, yychar, yyline, yytext());}
+("true") {return new Symbol(sym.True, yychar, yyline, yytext());}
+
+
+
+
 /* Identificador */
 {L}({L}|{D})* {return new Symbol(sym.Identificador, yychar, yyline, yytext());}
 
