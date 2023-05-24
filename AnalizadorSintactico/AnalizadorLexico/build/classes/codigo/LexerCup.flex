@@ -29,6 +29,7 @@ espacio=[ ,\t,\r,\n]+
 /* Comillas */
 ( "\"" ) {return new Symbol(sym.Comillas, yychar, yyline, yytext());}
 
+
 /* Tipos de datos */
 ( byte | char | long | float | double ) {return new Symbol(sym.T_dato, yychar, yyline, yytext());}
 
@@ -132,18 +133,17 @@ espacio=[ ,\t,\r,\n]+
 ("case") {return new Symbol(sym.Case, yychar, yyline, yytext());}
 ("asm") {return new Symbol(sym.Asm, yychar, yyline, yytext());}
 ("catch") {return new Symbol(sym.Catch, yychar, yyline, yytext());}
-("char") {return new Symbol(sym.Char, yychar, yyline, yytext());}
+
 ("class") {return new Symbol(sym.Class, yychar, yyline, yytext());}
 ("const") {return new Symbol(sym.Const, yychar, yyline, yytext());}
 ("continue") {return new Symbol(sym.Continue, yychar, yyline, yytext());}
 ("delete") {return new Symbol(sym.Delete, yychar, yyline, yytext());}
 ("dynamic_cast") {return new Symbol(sym.Dynamic_cast, yychar, yyline, yytext());}
 ("explicit") {return new Symbol(sym.Explicit, yychar, yyline, yytext());}
-("false") {return new Symbol(sym.False, yychar, yyline, yytext());}
+
 ("friend") {return new Symbol(sym.Friend, yychar, yyline, yytext());}
 ("inline") {return new Symbol(sym.Inline, yychar, yyline, yytext());}
-("long") {return new Symbol(sym.Long, yychar, yyline, yytext());}
-("int"){return new Symbol(sym.Int, yychar, yyline, yytext());}
+
 ("mutable") {return new Symbol(sym.Mutable, yychar, yyline, yytext());}
 ("new") {return new Symbol(sym.New, yychar, yyline, yytext());}
 ("operator") {return new Symbol(sym.Operator, yychar, yyline, yytext());}
@@ -173,8 +173,7 @@ espacio=[ ,\t,\r,\n]+
 ("void") {return new Symbol(sym.Void, yychar, yyline, yytext());}
 ("volatile") {return new Symbol(sym.Volatile, yychar, yyline, yytext());}
 ("wchar_t") {return new Symbol(sym.Wchar_t, yychar, yyline, yytext());}
-(",") {return new Symbol(sym.Coma, yychar, yyline, yytext());}
-("true") {return new Symbol(sym.True, yychar, yyline, yytext());}
+
 
 
 

@@ -23,6 +23,8 @@ espacio=[ ,\t,\r]+
 /* Comillas */
 ( "\"" ) {lexeme=yytext(); return Comillas;}
 
+
+
 /* Tipos de datos */
 ( byte | int | char | long | float | double ) {lexeme=yytext(); return T_dato;}
 
@@ -124,18 +126,16 @@ espacio=[ ,\t,\r]+
 ("case") {lexeme=yytext(); return Case;}
 ("asm") {lexeme=yytext(); return Asm;}
 ("catch") {lexeme=yytext(); return Catch;}
-("char") {lexeme=yytext(); return Char;}
+
 ("class") {lexeme=yytext(); return Class;}
 ("const") {lexeme=yytext(); return Const;}
 ("continue") {lexeme=yytext(); return Continue;}
 ("delete") {lexeme=yytext(); return Delete;}
 ("dynamic_cast") {lexeme=yytext(); return Dynamiic_cast;}
 ("explicit") {lexeme=yytext(); return Explicit;}
-("false") {lexeme=yytext(); return False;}
 ("friend") {lexeme=yytext(); return Friend;}
 ("inline") {lexeme=yytext(); return Inline;}
-("long") {lexeme=yytext(); return Long;}
-("int") {lexeme=yytext(); return Int;}
+
 ("mutable") {lexeme=yytext(); return Mutable;}
 ("new") {lexeme=yytext(); return New;}
 ("operator") {lexeme=yytext(); return Operator;}
@@ -154,7 +154,7 @@ espacio=[ ,\t,\r]+
 ("switch") {lexeme=yytext(); return Switch;}
 ("template") {lexeme=yytext(); return Template;}
 ("this") {lexeme=yytext(); return This;}
-("throw {lexeme=yytext(); return Throw;}
+("throw") {lexeme=yytext(); return Throw;}
 ("try") {lexeme=yytext(); return Try;}
 ("typedef") {lexeme=yytext(); return Typedef;}
 ("typeid") {lexeme=yytext(); return Typeid;}
@@ -165,8 +165,7 @@ espacio=[ ,\t,\r]+
 ("void") {lexeme=yytext(); return Void;}
 ("volatile") {lexeme=yytext(); return Volatile;}
 ("wchar_t") {lexeme=yytext(); return Wchar_t;}
-(",") {lexeme=yytext(); return Coma;}
-("true") {lexeme=yytext(); return True;}
+
 
 
 

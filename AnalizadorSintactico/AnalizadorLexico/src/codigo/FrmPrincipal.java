@@ -158,6 +158,9 @@ public class FrmPrincipal extends javax.swing.JFrame {
                 case ERROR:
                     resultado += "  <Simbolo no definido>\n";
                     break;
+                    case Bool:
+                    resultado += "  <Tipo de dato bool>\t" + lexer.lexeme + "\n";
+                    break;
                 default:
                     resultado += "  < " + lexer.lexeme + " >\n";
                     break;
