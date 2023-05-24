@@ -117,6 +117,12 @@ espacio=[ ,\t,\r]+
 /* Espacio std */
 ("std") {lexeme=yytext(); return Espacio_de_Nombre;}
 
+/* break  */
+("break") {lexeme=yytext(); return Break;}
+("bool") {lexeme=yytext(); return Bool;}
+
+
+
 /* Identificador */
 {L}({L}|{D})* {lexeme=yytext(); return Identificador;}
 
