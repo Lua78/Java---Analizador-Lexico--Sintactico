@@ -46,9 +46,8 @@ public enum Tokens {
     Using,
     Identificador,
     Numero,
-    Espacio_de_Nombre
-    /*
-    */
+    Espacio_de_Nombre,
+ 
     Default,
     Case,
     Asm,
