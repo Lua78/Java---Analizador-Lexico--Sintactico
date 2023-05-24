@@ -18,16 +18,16 @@ parser code
 terminal Linea, Comillas, T_dato, Int, Cadena, If, Else, Do, While, For,
     Igual, Suma, Resta, Multiplicacion, Division, Op_logico, Op_relacional,
     Op_atribucion, Op_incremento, Op_booleano, Parentesis_a, Parentesis_c,
-    Llave_a, Llave_c, Corchete_a, Corchete_c, Main,Cout, P_coma, Identificador,Using,NameSpace, Espacio_de_Nombre, 
+    Llave_a, Llave_c, Corchete_a,Corchete_c, Main,Cout, P_coma, Identificador,Using,NameSpace, Espacio_de_Nombre, 
     Numero,Palabra,Doble_Menor,Include,Libreria, Default,
     Case,Asm,Auto,Break,Catch,Char,Class,Cons_cast,Const,Continue,Delete,
-    Dynamic_cast,Explicit,False,Friend,Inline,Long,Int,Mutable,New,Operator,
+    Dynamic_cast,Explicit,False,Friend,Inline,Long,Mutable,New,Operator,
     Private,Protected,Public,Register,Reinterpret_cast,Return,Short,Signed,
     Sizeof,Static,Static_cast,Struct,Switch,Template,This,Throw,True,Try,Typedef,Typeid,
     Typename,Union, Unsigned,Virtual,Void,Volatile,Wchar_t,Bool,Coma,  ERROR;
 
 
-    non terminal  INICIO, MAIN , SENTENCIA, DECLARACION,ESPACIOS_NOMBRE, DECLARACION_FOR, IF, IF_ELSE,
+    non terminal  INICIO, MAIN ,VARIABLE, SENTENCIA, DECLARACION,ESPACIOS_NOMBRE, DECLARACION_FOR, IF, IF_ELSE,
     WHILE, DO_WHILE, FOR, SENTENCIA_BOOLEANA, SENTENCIA_FOR, SALIDA;
 
 start with INICIO;
@@ -59,8 +59,8 @@ SENTENCIA ::=
     SALIDA
 ;
 DECLARACION ::= 
-    Int Identificador P_coma | 
-    Int Identificador Op_atribucion Numero P_coma |
+    Int VARIABLE P_coma | 
+    Int VARIABLE Op_atribucion Numero P_coma |
     Int Identificador Igual Numero P_coma |
     Int Identificador Op_incremento P_coma | 
     Int Op_incremento Identificador P_coma | 
@@ -74,6 +74,11 @@ DECLARACION ::=
     Cadena Identificador Op_atribucion Comillas Identificador Comillas P_coma |
     Cadena Identificador Igual Comillas Identificador Comillas P_coma
 ;
+VARIABLE ::= 
+        Identificador | 
+        Identificador Coma VARIABLE
+;
+
 IF ::= If Parentesis_a SENTENCIA_BOOLEANA Parentesis_c Llave_a SENTENCIA Llave_c
 ;
 SENTENCIA_BOOLEANA ::= 

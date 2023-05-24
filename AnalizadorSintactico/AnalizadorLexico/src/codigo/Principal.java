@@ -16,9 +16,9 @@ import java.nio.file.Paths;
  */
 public class Principal {
     public static void main(String[] args) throws Exception {
-        String ruta1 = "G:/AnalizadorSintactico/AnalizadorSintactico/AnalizadorLexico/src/codigo/Lexer.flex";
-        String ruta2 = "G:/AnalizadorSintactico/AnalizadorSintactico/AnalizadorLexico/src/codigo/LexerCup.flex";
-        String[] rutaS = {"-parser", "Sintax", "G:/AnalizadorSintactico/AnalizadorSintactico/AnalizadorLexico/src/codigo/Sintax.cup"};
+        String ruta1 = "C:\\Users\\2010663\\Desktop\\Java\\AnalizadorSintactico\\AnalizadorLexico\\src\\codigo\\Lexer.flex";
+        String ruta2 = "C:\\Users\\2010663\\Desktop\\Java\\AnalizadorSintactico\\AnalizadorLexico\\src\\codigo\\LexerCup.flex";
+        String[] rutaS = {"-parser", "Sintax", "C:\\Users\\2010663\\Desktop\\Java\\AnalizadorSintactico\\AnalizadorLexico\\src\\codigo\\Sintax.cup"};
         generar(ruta1, ruta2, rutaS);
     }
     
@@ -32,21 +32,21 @@ public class Principal {
         JFlex.Main.generate(archivo);
         java_cup.Main.main(rutaS);
         
-        Path rutaSym = Paths.get("G:/AnalizadorSintactico/AnalizadorSintactico/AnalizadorLexico/src/codigo/sym.java");
+        Path rutaSym = Paths.get("C:\\Users\\2010663\\Desktop\\Java\\AnalizadorSintactico\\AnalizadorLexico\\src\\codigo\\sym.java");
         if (Files.exists(rutaSym)) {
             Files.delete(rutaSym);
         }
         Files.move(
-                Paths.get("G:/AnalizadorSintactico/AnalizadorSintactico/AnalizadorLexico/sym.java"), 
-                Paths.get("G:/AnalizadorSintactico/AnalizadorSintactico/AnalizadorLexico/src/codigo/sym.java")
+                Paths.get("C:\\Users\\2010663\\Desktop\\Java\\AnalizadorSintactico\\AnalizadorLexico\\src\\codigo\\sym.java"), 
+                Paths.get("C:\\Users\\2010663\\Desktop\\Java\\AnalizadorSintactico\\AnalizadorLexico\\src\\codigo\\sym.java")
         );
-        Path rutaSin = Paths.get("G:/AnalizadorSintactico/AnalizadorSintactico/AnalizadorLexico/src/codigo/Sintax.java");
+        Path rutaSin = Paths.get("C:\\Users\\2010663\\Desktop\\Java\\AnalizadorSintactico\\AnalizadorLexico\\src\\codigo\\Sintax.java");
         if (Files.exists(rutaSin)) {
             Files.delete(rutaSin);
         }
         Files.move(
-                Paths.get("G:/AnalizadorSintactico/AnalizadorSintactico/AnalizadorLexico/Sintax.java"), 
-                Paths.get("G:/AnalizadorSintactico/AnalizadorSintactico/AnalizadorLexico/src/codigo/Sintax.java")
+                Paths.get("C:\\Users\\2010663\\Desktop\\Java\\AnalizadorSintactico\\AnalizadorLexico\\src\\codigo\\Sintax.java"), 
+                Paths.get("C:\\Users\\2010663\\Desktop\\Java\\AnalizadorSintactico\\AnalizadorLexico\\src\\codigo\\Sintax.java")
         );
     }
 }
