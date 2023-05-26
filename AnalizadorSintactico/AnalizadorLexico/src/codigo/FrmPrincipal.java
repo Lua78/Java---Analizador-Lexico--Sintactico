@@ -153,8 +153,11 @@ public class FrmPrincipal extends javax.swing.JFrame {
                     resultado += "  <Libreria>\t" + lexer.lexeme + "\n";                    
                     break;                    
                 case Doble_Menor:
-                    resultado += "  <Menos Menos>\t" + lexer.lexeme + "\n";                    
-                    break;                    
+                    resultado += "  <Simbolo de lectura>\t" + lexer.lexeme + "\n";                    
+                    break;
+                case Var_consecutiva:
+                    resultado += "  <Variable concatenada>\t" + lexer.lexeme + "\n";                    
+                    break;                       
                 case ERROR:
                     resultado += "  <Simbolo no definido>\n";
                     break;
@@ -383,7 +386,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
         
         try {
             s.parse();
-            txtAnalizarSin.setText("Ese programita compilaria correctamente, Siuuuu");
+            txtAnalizarSin.setText("El analisis es correcto..\n");
             txtAnalizarSin.setForeground(new Color(25, 125, 61));
         } catch (Exception ex) {
             Symbol sym = s.getS();

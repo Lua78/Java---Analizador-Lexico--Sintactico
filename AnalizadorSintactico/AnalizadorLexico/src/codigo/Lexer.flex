@@ -26,7 +26,7 @@ espacio=[ ,\t,\r]+
 
 
 /* Tipos de datos */
-( byte | int | char | long | float | double ) {lexeme=yytext(); return T_dato;}
+( byte | char | long | float | double ) {lexeme=yytext(); return T_dato;}
 
 /* Tipo de dato String */
 ( String ) {lexeme=yytext(); return Cadena;}
@@ -168,8 +168,8 @@ espacio=[ ,\t,\r]+
 
 
 
-
 /* Identificador */
+{L}({L}|{D})* "\," {lexeme=yytext(); return Var_consecutiva;}
 {L}({L}|{D})* {lexeme=yytext(); return Identificador;}
 
 /* Numero */

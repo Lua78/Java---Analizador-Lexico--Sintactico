@@ -10,6 +10,7 @@ package codigo;
  * @author Charly Ponce
  */
 public enum Tokens {
+    Var_consecutiva,
     Linea,
     Comillas,
     Cout,
@@ -97,6 +98,5 @@ public enum Tokens {
     Volatile,
     Wchar_t,
     Bool,
-    Coma,
     ERROR
 }

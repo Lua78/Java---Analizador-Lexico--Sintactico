@@ -177,7 +177,7 @@ espacio=[ ,\t,\r,\n]+
 
 
 
-
+{L}({L}|{D})* "\," {return new Symbol(sym.Var_consecutiva, yychar, yyline, yytext());}
 /* Identificador */
 {L}({L}|{D})* {return new Symbol(sym.Identificador, yychar, yyline, yytext());}
 
