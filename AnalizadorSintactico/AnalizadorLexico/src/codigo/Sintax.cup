@@ -15,7 +15,7 @@ parser code
 }
 :};
 
-terminal Linea,Var_consecutiva, Comillas, T_dato, Int, Cadena, If, Else, Do, While, For,
+terminal Linea, Comillas, T_dato, Int, Cadena, If, Else, Do, While, For,
     Igual, Suma, Resta, Multiplicacion, Division, Op_logico, Op_relacional,
     Op_atribucion, Op_incremento, Op_booleano, Parentesis_a, Parentesis_c,
     Llave_a, Llave_c, Corchete_a,Corchete_c, Main,Cout, P_coma, Identificador,Using,NameSpace, Espacio_de_Nombre, 
@@ -24,7 +24,7 @@ terminal Linea,Var_consecutiva, Comillas, T_dato, Int, Cadena, If, Else, Do, Whi
     Dynamic_cast,Explicit,False,Friend,Inline,Long,Mutable,New,Operator,
     Private,Protected,Public,Register,Reinterpret_cast,Return,Short,Signed,
     Sizeof,Static,Static_cast,Struct,Switch,Template,This,Throw,True,Try,Typedef,Typeid,
-    Typename,Union, Unsigned,Virtual,Void,Volatile,Wchar_t,Bool,  ERROR;
+    Typename,Union, Unsigned,Variables,Virtual,Void,Volatile,Bool,  ERROR;
 
 
     non terminal  INICIO, MAIN ,VARIABLE, SENTENCIA, DECLARACION,ESPACIOS_NOMBRE, DECLARACION_FOR, IF, IF_ELSE,

@@ -127,11 +127,7 @@ espacio=[ ,\t,\r]+
 ("asm") {lexeme=yytext(); return Asm;}
 ("catch") {lexeme=yytext(); return Catch;}
 
-("class") {lexeme=yytext(); return Class;}
-("const") {lexeme=yytext(); return Const;}
-("continue") {lexeme=yytext(); return Continue;}
-("delete") {lexeme=yytext(); return Delete;}
-("dynamic_cast") {lexeme=yytext(); return Dynamiic_cast;}
+("dynamic_cast") {lexeme=yytext(); return Dynamic_cast;}
 ("explicit") {lexeme=yytext(); return Explicit;}
 ("friend") {lexeme=yytext(); return Friend;}
 ("inline") {lexeme=yytext(); return Inline;}
@@ -164,12 +160,11 @@ espacio=[ ,\t,\r]+
 ("virtual") {lexeme=yytext(); return Virtual;}
 ("void") {lexeme=yytext(); return Void;}
 ("volatile") {lexeme=yytext(); return Volatile;}
-("wchar_t") {lexeme=yytext(); return Wchar_t;}
 
 
 
 /* Identificador */
-{L}({L}|{D})* "\," {lexeme=yytext(); return Var_consecutiva;}
+({L}({L}|{D} | "_")*"\,") {lexeme=yytext(); return Variables;}
 {L}({L}|{D})* {lexeme=yytext(); return Identificador;}
 
 /* Numero */

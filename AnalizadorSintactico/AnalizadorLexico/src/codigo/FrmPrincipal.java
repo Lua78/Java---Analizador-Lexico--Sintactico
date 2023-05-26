@@ -69,7 +69,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
                     resultado += "  <Reservada while>\t" + lexer.lexeme + "\n";
                     break;
                 case For:
-                    resultado += "  <Reservada while>\t" + lexer.lexeme + "\n";
+                    resultado += "  <Reservada for>\t" + lexer.lexeme + "\n";
                     break;
                 case Igual:
                     resultado += "  <Operador igual>\t" + lexer.lexeme + "\n";
@@ -155,7 +155,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
                 case Doble_Menor:
                     resultado += "  <Simbolo de lectura>\t" + lexer.lexeme + "\n";                    
                     break;
-                case Var_consecutiva:
+                case Variables:
                     resultado += "  <Variable concatenada>\t" + lexer.lexeme + "\n";                    
                     break;                       
                 case ERROR:
