@@ -165,6 +165,7 @@ espacio=[ ,\t,\r]+
 
 /* Identificador */
 ({L}({L}|{D} | "_")*"\,") {lexeme=yytext(); return Variables;}
+
 {L}({L}|{D})* {lexeme=yytext(); return Identificador;}
 
 /* Numero */

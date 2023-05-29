@@ -176,11 +176,12 @@ espacio=[ ,\t,\r,\n]+
 
 
 
-
-({L}({L}|{D}|"_")*"\,") {return new Symbol(sym.Variables,, yychar, yyline, yytext());}
+/*Para declaracion simultanea de variables*/
+{L}({L}|{D}|"_")*"\," {return new Symbol(sym.Variables, yychar, yyline, yytext());}
 
 /* Identificador */
 {L}({L}|{D})* {return new Symbol(sym.Identificador, yychar, yyline, yytext());}
+
 
 /* Numero */
 ("(-"{D}+")")|{D}+ {return new Symbol(sym.Numero, yychar, yyline, yytext());}

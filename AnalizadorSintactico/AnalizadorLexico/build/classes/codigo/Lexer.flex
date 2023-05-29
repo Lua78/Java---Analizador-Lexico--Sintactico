@@ -26,7 +26,7 @@ espacio=[ ,\t,\r]+
 
 
 /* Tipos de datos */
-( byte | int | char | long | float | double ) {lexeme=yytext(); return T_dato;}
+( byte | char | long | float | double ) {lexeme=yytext(); return T_dato;}
 
 /* Tipo de dato String */
 ( String ) {lexeme=yytext(); return Cadena;}
@@ -127,11 +127,7 @@ espacio=[ ,\t,\r]+
 ("asm") {lexeme=yytext(); return Asm;}
 ("catch") {lexeme=yytext(); return Catch;}
 
-("class") {lexeme=yytext(); return Class;}
-("const") {lexeme=yytext(); return Const;}
-("continue") {lexeme=yytext(); return Continue;}
-("delete") {lexeme=yytext(); return Delete;}
-("dynamic_cast") {lexeme=yytext(); return Dynamiic_cast;}
+("dynamic_cast") {lexeme=yytext(); return Dynamic_cast;}
 ("explicit") {lexeme=yytext(); return Explicit;}
 ("friend") {lexeme=yytext(); return Friend;}
 ("inline") {lexeme=yytext(); return Inline;}
@@ -164,12 +160,12 @@ espacio=[ ,\t,\r]+
 ("virtual") {lexeme=yytext(); return Virtual;}
 ("void") {lexeme=yytext(); return Void;}
 ("volatile") {lexeme=yytext(); return Volatile;}
-("wchar_t") {lexeme=yytext(); return Wchar_t;}
-
 
 
 
 /* Identificador */
+({L}({L}|{D} | "_")*"\,") {lexeme=yytext(); return Variables;}
+
 {L}({L}|{D})* {lexeme=yytext(); return Identificador;}
 
 /* Numero */

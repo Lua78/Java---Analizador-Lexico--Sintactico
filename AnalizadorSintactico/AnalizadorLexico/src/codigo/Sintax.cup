@@ -76,7 +76,7 @@ DECLARACION ::=
 ;
 VARIABLE ::= 
         Identificador | 
-        Var_consecutiva VARIABLE
+        Variables VARIABLE
 ;
 
 IF ::= If Parentesis_a SENTENCIA_BOOLEANA Parentesis_c Llave_a SENTENCIA Llave_c

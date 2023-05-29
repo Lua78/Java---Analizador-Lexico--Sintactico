@@ -172,14 +172,16 @@ espacio=[ ,\t,\r,\n]+
 ("virtual") {return new Symbol(sym.Virtual, yychar, yyline, yytext());}
 ("void") {return new Symbol(sym.Void, yychar, yyline, yytext());}
 ("volatile") {return new Symbol(sym.Volatile, yychar, yyline, yytext());}
-("wchar_t") {return new Symbol(sym.Wchar_t, yychar, yyline, yytext());}
 
 
 
 
+/*Para declaracion simultanea de variables*/
+{L}({L}|{D}|"_")*"\," {return new Symbol(sym.Variables, yychar, yyline, yytext());}
 
 /* Identificador */
 {L}({L}|{D})* {return new Symbol(sym.Identificador, yychar, yyline, yytext());}
+
 
 /* Numero */
 ("(-"{D}+")")|{D}+ {return new Symbol(sym.Numero, yychar, yyline, yytext());}

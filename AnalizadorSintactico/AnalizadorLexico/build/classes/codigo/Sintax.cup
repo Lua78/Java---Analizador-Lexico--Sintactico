@@ -24,7 +24,7 @@ terminal Linea, Comillas, T_dato, Int, Cadena, If, Else, Do, While, For,
     Dynamic_cast,Explicit,False,Friend,Inline,Long,Mutable,New,Operator,
     Private,Protected,Public,Register,Reinterpret_cast,Return,Short,Signed,
     Sizeof,Static,Static_cast,Struct,Switch,Template,This,Throw,True,Try,Typedef,Typeid,
-    Typename,Union, Unsigned,Virtual,Void,Volatile,Wchar_t,Bool,Coma,  ERROR;
+    Typename,Union, Unsigned,Variables,Virtual,Void,Volatile,Bool,  ERROR;
 
 
     non terminal  INICIO, MAIN ,VARIABLE, SENTENCIA, DECLARACION,ESPACIOS_NOMBRE, DECLARACION_FOR, IF, IF_ELSE,
@@ -76,7 +76,7 @@ DECLARACION ::=
 ;
 VARIABLE ::= 
         Identificador | 
-        Identificador Coma VARIABLE
+        Variables VARIABLE
 ;
 
 IF ::= If Parentesis_a SENTENCIA_BOOLEANA Parentesis_c Llave_a SENTENCIA Llave_c
