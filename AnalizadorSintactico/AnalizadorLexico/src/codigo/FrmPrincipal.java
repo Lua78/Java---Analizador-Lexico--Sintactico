@@ -153,7 +153,10 @@ public class FrmPrincipal extends javax.swing.JFrame {
                     resultado += "  <Libreria>\t" + lexer.lexeme + "\n";                    
                     break;                    
                 case Doble_Menor:
-                    resultado += "  <Simbolo de lectura>\t" + lexer.lexeme + "\n";                    
+                    resultado += "  <Simbolo de salida>\t" + lexer.lexeme + "\n";                    
+                    break;
+                case Doble_Mayor:
+                    resultado += "  <Simbolo de entrada>\t" + lexer.lexeme + "\n";                    
                     break;
                 case Variables:
                     resultado += "  <Variable concatenada>\t" + lexer.lexeme + "\n";                    
@@ -166,7 +169,10 @@ public class FrmPrincipal extends javax.swing.JFrame {
                     break;  
                  case Dos_P:
                     resultado += "  <Dos Puntos>\t\t" + lexer.lexeme + "\n";                    
-                    break;  
+                    break;
+                 case Cin:
+                    resultado += "  <Palabra reservada cin>\t" + lexer.lexeme + "\n";                    
+                    break; 
                 case ERROR:
                     resultado += "  <Simbolo no definido>\n";
                     break;

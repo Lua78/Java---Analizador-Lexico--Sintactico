@@ -110,7 +110,10 @@ espacio=[ ,\t,\r,\n]+
 
 /*Salida de datos*/
 ("cout") {return new Symbol(sym.Cout, yychar, yyline, yytext());}
+("cin") {return new Symbol(sym.Cin, yychar, yyline, yytext());}
+
 ("<<") {return new Symbol(sym.Doble_Menor, yychar, yyline, yytext());}
+(">>") {return new Symbol(sym.Doble_Mayor, yychar, yyline, yytext());}
 
 /*Include*/
 ("#include") {return new Symbol(sym.Include, yychar, yyline, yytext());}

@@ -102,6 +102,7 @@ espacio=[ ,\t,\r]+
 
 /*Salida de datos*/
 ( << ) {lexeme=yytext(); return Doble_Menor;}
+( >> ) {lexeme=yytext(); return Doble_Mayor;}
 ("cout")  {lexeme=yytext(); return Cout;}
 
 /*Include*/
@@ -160,7 +161,7 @@ espacio=[ ,\t,\r]+
 ("virtual") {lexeme=yytext(); return Virtual;}
 ("void") {lexeme=yytext(); return Void;}
 ("volatile") {lexeme=yytext(); return Volatile;}
-
+("cin") {lexeme=yytext(); return Cin;}
 
 
 /* Identificador */
