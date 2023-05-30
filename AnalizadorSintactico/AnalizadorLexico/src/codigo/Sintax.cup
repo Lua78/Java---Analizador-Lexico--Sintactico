@@ -111,6 +111,8 @@ SENTENCIA_SWITCH ::=
 ;
 
 SALIDA_ENTRADA::= 
+    Cout Doble_Menor Identificador P_coma |
+    Cout Doble_Menor Palabra Doble_Menor Identificador P_coma |
     Cout Doble_Menor Palabra P_coma |
     Cin Doble_Mayor Identificador P_coma
 ;
