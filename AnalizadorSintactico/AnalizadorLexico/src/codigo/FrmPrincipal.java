@@ -157,12 +157,18 @@ public class FrmPrincipal extends javax.swing.JFrame {
                     break;
                 case Variables:
                     resultado += "  <Variable concatenada>\t" + lexer.lexeme + "\n";                    
-                    break;                       
+                    break;
+                 case Switch:
+                    resultado += "  <Palabra reservada switch>\t" + lexer.lexeme + "\n";                    
+                    break;
+                 case Break:
+                    resultado += "  <Palabra reservada break>\t" + lexer.lexeme + "\n";                    
+                    break;  
+                 case Dos_P:
+                    resultado += "  <Dos Puntos>\t\t" + lexer.lexeme + "\n";                    
+                    break;  
                 case ERROR:
                     resultado += "  <Simbolo no definido>\n";
-                    break;
-                    case Bool:
-                    resultado += "  <Tipo de dato bool>\t" + lexer.lexeme + "\n";
                     break;
                 default:
                     resultado += "  < " + lexer.lexeme + " >\n";

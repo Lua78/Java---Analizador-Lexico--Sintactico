@@ -22,7 +22,7 @@ espacio=[ ,\t,\r]+
 
 /* Comillas */
 ( "\"" ) {lexeme=yytext(); return Comillas;}
-
+(":") {lexeme=yytext(); return Dos_P;}
 
 
 /* Tipos de datos */

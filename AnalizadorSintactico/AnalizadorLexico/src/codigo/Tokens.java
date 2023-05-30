@@ -16,6 +16,7 @@ public enum Tokens {
     T_dato,
     Cadena,
     Doble_Menor,
+    Dos_P,
     If,
     Include,
     Else,

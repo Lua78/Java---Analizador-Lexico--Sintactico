@@ -28,7 +28,7 @@ espacio=[ ,\t,\r,\n]+
 
 /* Comillas */
 ( "\"" ) {return new Symbol(sym.Comillas, yychar, yyline, yytext());}
-
+(":") {return new Symbol(sym.Dos_P, yychar, yyline, yytext());}
 
 /* Tipos de datos */
 ( byte | char | long | float | double ) {return new Symbol(sym.T_dato, yychar, yyline, yytext());}
