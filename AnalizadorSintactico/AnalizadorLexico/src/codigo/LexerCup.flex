@@ -119,7 +119,7 @@ espacio=[ ,\t,\r,\n]+
 ("#include") {return new Symbol(sym.Include, yychar, yyline, yytext());}
 
 /*Librerias*/
-("<iostream>") {return new Symbol(sym.Libreria, yychar, yyline, yytext());}
+("<iostream>" | "<cctype>" | "<cmath>" | "<ctime>"  | "<cstring>" | "<cstdlib>" | "<random>" ) {return new Symbol(sym.Libreria, yychar, yyline, yytext());}
 
 /*using*/
 ("using") {return new Symbol(sym.Using, yychar, yyline, yytext());}

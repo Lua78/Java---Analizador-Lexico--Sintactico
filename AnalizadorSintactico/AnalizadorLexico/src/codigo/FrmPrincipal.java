@@ -150,7 +150,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
                     resultado += "  <Reservada Include>\t" + lexer.lexeme + "\n";                    
                     break;    
                 case Libreria:
-                    resultado += "  <Libreria>\t" + lexer.lexeme + "\n";                    
+                    resultado += "  <Libreria>\t\t" + lexer.lexeme + "\n";                    
                     break;                    
                 case Doble_Menor:
                     resultado += "  <Simbolo de salida>\t" + lexer.lexeme + "\n";                    
