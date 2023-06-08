@@ -27,8 +27,8 @@ terminal Linea, Comillas,Cin,Doble_Mayor, T_dato, Int, Cadena, If, Else, Do,Dos_
     Typename,Union, Unsigned,Variables,Virtual,Void,Volatile,Bool, ERROR;
 
 
-    non terminal  INICIO, MAIN ,VARIABLE, SENTENCIA, DECLARACION,ESPACIOS_NOMBRE, DECLARACION_FOR, IF, IF_ELSE,
-    WHILE, DO_WHILE, FOR, SENTENCIA_BOOLEANA, SENTENCIA_FOR, SALIDA_ENTRADA,SWITCH, SENTENCIA_SWITCH;
+    non terminal  INICIO,ASIGNACION, MAIN ,VARIABLE, SENTENCIA, DECLARACION,ESPACIOS_NOMBRE, DECLARACION_FOR, IF, IF_ELSE,
+    WHILE, DO_WHILE, FOR,OPERACION, SENTENCIA_BOOLEANA, SENTENCIA_FOR, SALIDA_ENTRADA,SWITCH, SENTENCIA_SWITCH;
 
 start with INICIO;
 
@@ -59,7 +59,9 @@ SENTENCIA ::=
     SWITCH |
     SENTENCIA SWITCH |
     SENTENCIA SALIDA_ENTRADA |
-    SALIDA_ENTRADA
+    SALIDA_ENTRADA |
+    ASIGNACION |
+    SENTENCIA ASIGNACION;
 ;
 DECLARACION ::= 
     Int VARIABLE P_coma | 
@@ -125,3 +127,23 @@ DECLARACION_FOR ::=
     Identificador Op_incremento | 
     Op_incremento Identificador
 ;
+ASIGNACION ::=
+    Identificador Igual OPERACION  
+;
+
+OPERACION ::= 
+    Numero |
+    Identificador |
+    Identificador Suma identificador |
+    Numero Suma Identificador |
+    Identificador Suma Numero |
+    Identificador Resta identificador |
+    Numero Resta Identificador |
+    Identificador Resta Numero |
+    Identificador Multiplicacion identificador |
+    Numero Multiplicacion Identificador |
+    Identificador Multiplicacion Numero |
+    Identificador Division identificador |
+    Numero Division Identificador |
+    Identificador Division Numero |
+
