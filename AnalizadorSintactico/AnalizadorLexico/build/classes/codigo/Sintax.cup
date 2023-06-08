@@ -61,7 +61,7 @@ SENTENCIA ::=
     SENTENCIA SALIDA_ENTRADA |
     SALIDA_ENTRADA |
     ASIGNACION |
-    SENTENCIA ASIGNACION;
+    SENTENCIA ASIGNACION
 ;
 DECLARACION ::= 
     Int VARIABLE P_coma | 
@@ -127,23 +127,25 @@ DECLARACION_FOR ::=
     Identificador Op_incremento | 
     Op_incremento Identificador
 ;
+
 ASIGNACION ::=
     Identificador Igual OPERACION  
 ;
 
 OPERACION ::= 
-    Numero |
-    Identificador |
-    Identificador Suma identificador |
-    Numero Suma Identificador |
-    Identificador Suma Numero |
-    Identificador Resta identificador |
-    Numero Resta Identificador |
-    Identificador Resta Numero |
-    Identificador Multiplicacion identificador |
-    Numero Multiplicacion Identificador |
-    Identificador Multiplicacion Numero |
-    Identificador Division identificador |
-    Numero Division Identificador |
-    Identificador Division Numero |
+    Numero P_coma |
+    Identificador P_coma |
+    Identificador Suma Identificador P_coma |
+    Numero Suma Identificador P_coma |
+    Identificador Suma Numero P_coma |
+    Identificador Resta Identificador P_coma |
+    Numero Resta Identificador P_coma |
+    Identificador Resta Numero P_coma |
+    Identificador Multiplicacion Identificador P_coma |
+    Numero Multiplicacion Identificador P_coma |
+    Identificador Multiplicacion Numero P_coma |
+    Identificador Division Identificador P_coma |
+    Numero Division Identificador P_coma |
+    Identificador Division Numero P_coma 
+;
 
