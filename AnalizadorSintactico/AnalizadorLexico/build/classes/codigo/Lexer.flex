@@ -109,7 +109,7 @@ espacio=[ ,\t,\r]+
 ("#include") {lexeme=yytext(); return Include;}
 
 /* Libreria */
-("<iostream>" | "<cctype>" | "<cmath>" | "<ctime>"  | "<cstring>" | "<cstdlib>" | "<random>" ) {lexeme=yytext(); return Libreria;}
+("<iostream>" | "<cctype>" | "<cmath>" | "<ctime>" | "<conio.h>" | "<cstring>" | "<cstdlib>" | "<random>" ) {lexeme=yytext(); return Libreria;}
 
 /* Using */
 ("using") {lexeme=yytext(); return Using;}

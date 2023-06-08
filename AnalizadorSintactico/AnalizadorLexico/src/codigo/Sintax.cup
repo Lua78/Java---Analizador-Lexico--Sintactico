@@ -66,22 +66,25 @@ SENTENCIA ::=
 DECLARACION ::= 
     Int VARIABLE P_coma | 
     Int VARIABLE Op_atribucion Numero P_coma |
-    Int Identificador Igual Numero P_coma |
-    Int Identificador Op_incremento P_coma | 
-    Int Op_incremento Identificador P_coma | 
-    T_dato Identificador P_coma | 
-    T_dato Identificador Op_atribucion Numero P_coma |
-    T_dato Identificador Igual Numero P_coma |
-    T_dato Identificador Op_incremento P_coma | 
-    T_dato Op_incremento Identificador P_coma | 
-    Cadena Identificador Op_atribucion Comillas Comillas P_coma |
-    Cadena Identificador Igual Comillas Comillas P_coma |
-    Cadena Identificador Op_atribucion Comillas Identificador Comillas P_coma |
-    Cadena Identificador Igual Comillas Identificador Comillas P_coma
+    Int VARIABLE Igual Numero P_coma |
+    Int VARIABLE Op_incremento P_coma | 
+    Int Op_incremento VARIABLE P_coma | 
+    T_dato VARIABLE P_coma | 
+    T_dato VARIABLE Op_atribucion Numero P_coma |
+    T_dato VARIABLE Igual Numero P_coma |
+    T_dato VARIABLE Op_incremento P_coma | 
+    T_dato Op_incremento VARIABLE P_coma | 
+    Cadena VARIABLE Op_atribucion Comillas Comillas P_coma |
+    Cadena VARIABLE Igual Comillas Comillas P_coma |
+    Cadena VARIABLE Op_atribucion Comillas Identificador Comillas P_coma |
+    Cadena VARIABLE Igual Comillas Identificador Comillas P_coma
 ;
 VARIABLE ::= 
         Identificador | 
-        Variables VARIABLE
+        Variables VARIABLE |
+        Identificador Corchete_a Numero Corchete_c
+
+        
 ;
 
 IF ::= If Parentesis_a SENTENCIA_BOOLEANA Parentesis_c Llave_a SENTENCIA Llave_c
@@ -148,4 +151,5 @@ OPERACION ::=
     Numero Division Identificador P_coma |
     Identificador Division Numero P_coma 
 ;
+
 
