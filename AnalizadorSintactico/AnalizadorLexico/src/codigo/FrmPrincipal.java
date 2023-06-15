@@ -176,6 +176,9 @@ public class FrmPrincipal extends javax.swing.JFrame {
                 case ERROR:
                     resultado += "  <Simbolo no definido>\n";
                     break;
+                case Do_cierre:
+                    resultado += "  <Fin do while>\t\t" + lexer.lexeme + "\n";
+                    break;
                 default:
                     resultado += "  < " + lexer.lexeme + " >\n";
                     break;

@@ -11,6 +11,7 @@ package codigo;
  */
 public enum Tokens {
     Linea,
+    Do_cierre,
     Comillas,
     Cout,
     Cin,

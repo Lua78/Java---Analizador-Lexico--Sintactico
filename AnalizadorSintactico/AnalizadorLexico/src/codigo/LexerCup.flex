@@ -175,7 +175,7 @@ espacio=[ ,\t,\r,\n]+
 ("virtual") {return new Symbol(sym.Virtual, yychar, yyline, yytext());}
 ("void") {return new Symbol(sym.Void, yychar, yyline, yytext());}
 ("volatile") {return new Symbol(sym.Volatile, yychar, yyline, yytext());}
-
+("}while") {return new Symbol(sym.Do_cierre, yychar, yyline, yytext());}
 
 
 

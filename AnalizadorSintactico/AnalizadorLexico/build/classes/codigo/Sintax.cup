@@ -15,7 +15,7 @@ parser code
 }
 :};
 
-terminal Linea, Comillas,Cin,Doble_Mayor, T_dato, Int, Cadena, If, Else, Do,Dos_P, While, For,
+terminal Linea, Comillas,Do_cierre,Cin,Doble_Mayor, T_dato, Int, Cadena, If, Else, Do,Dos_P, While, For,
     Igual, Suma, Resta, Multiplicacion, Division, Op_logico, Op_relacional,
     Op_atribucion, Op_incremento, Op_booleano, Parentesis_a, Parentesis_c,
     Llave_a, Llave_c, Corchete_a,Corchete_c, Main,Cout, P_coma, Identificador,Using,NameSpace, Espacio_de_Nombre, 
@@ -52,7 +52,7 @@ SENTENCIA ::=
     IF_ELSE |
     SENTENCIA WHILE |
     WHILE |
-    SENTENCIA DO_WHILE
+    SENTENCIA DO_WHILE |
     DO_WHILE |
     SENTENCIA FOR |
     FOR |
@@ -101,7 +101,7 @@ SENTENCIA_BOOLEANA ::=
 IF_ELSE ::= If Parentesis_a SENTENCIA_BOOLEANA Parentesis_c Llave_a SENTENCIA Llave_c Else Llave_a SENTENCIA Llave_c
 ;
 
-DO_WHILE ::= Do Llave_a SENTENCIA Llave_c While Parentesis_a SENTENCIA_BOOLEANA Parentesis_c P_coma
+DO_WHILE ::= Do Llave_a SENTENCIA Do_cierre Parentesis_a SENTENCIA_BOOLEANA Parentesis_c P_coma
 ;
 WHILE ::= While Parentesis_a SENTENCIA_BOOLEANA Parentesis_c Llave_a SENTENCIA Llave_c
 ;

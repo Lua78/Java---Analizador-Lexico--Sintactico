@@ -162,7 +162,7 @@ espacio=[ ,\t,\r]+
 ("void") {lexeme=yytext(); return Void;}
 ("volatile") {lexeme=yytext(); return Volatile;}
 ("cin") {lexeme=yytext(); return Cin;}
-
+("}while") {lexeme=yytext(); return Do_cierre;}
 
 /* Identificador */
 ({L}({L}|{D} | "_")*"\,") {lexeme=yytext(); return Variables;}
