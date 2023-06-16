@@ -172,12 +172,15 @@ public class FrmPrincipal extends javax.swing.JFrame {
                     break;
                  case Cin:
                     resultado += "  <Palabra reservada cin>\t" + lexer.lexeme + "\n";                    
+                    break;
+                case Default:
+                    resultado += "  <Palabra reservada default>\t" + lexer.lexeme + "\n";                    
                     break; 
                 case ERROR:
                     resultado += "  <Simbolo no definido>\n";
                     break;
                 case Do_cierre:
-                    resultado += "  <Fin do while>\t\t" + lexer.lexeme + "\n";
+                    resultado += "  <Llave de cierre>\t }\n <Reservada while>\t while\n";
                     break;
                 default:
                     resultado += "  < " + lexer.lexeme + " >\n";

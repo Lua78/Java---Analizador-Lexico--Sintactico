@@ -1,0 +1,49 @@
+#include<iostream>
+using namespace std;
+int main(){
+
+int n;
+   do{
+      cout<<"Ingresa un numero positivo";
+      cin>>n;
+   }while(n<1 && n>12);
+
+      switch(n){
+      case 1:
+               cout<<"Mes de Enero";
+      break;
+      case 2:
+               cout<<"Mes de Febrero";
+      break;
+      case 3:
+               cout<<"Mes de Marzo";
+      break;
+      case 4:
+               cout<<"Mes de Abril";
+      break;
+      case 5:
+               cout<<"Mes de Mayo";
+      break;
+      case 6:
+               cout<<"Mes de Junio";
+      break;
+      case 7:
+               cout<<"Mes de Julio";
+      break;
+      case 8:
+               cout<<"Mes de Agosto";
+      break;
+      case 9:
+               cout<<"Mes de Septiembre";
+      break;
+      case 10:
+               cout<<"Mes de Octubre";
+      break;
+      case 11:
+               cout<<"Mes de Noviembre";
+      break;
+      case 12:
+               cout<<"Mes de Diciembre";
+      break;
+   }
+}
