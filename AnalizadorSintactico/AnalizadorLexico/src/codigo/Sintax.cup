@@ -28,7 +28,7 @@ terminal Linea, Comillas,Do_cierre,Cin,Doble_Mayor, T_dato, Int, Cadena, If, Els
 
 
     non terminal  INICIO,ASIGNACION, MAIN ,VARIABLE, SENTENCIA, DECLARACION,ESPACIOS_NOMBRE, DECLARACION_FOR, IF, IF_ELSE
-    ,DO_WHILE,WHILE, FOR,OPERACION, SENTENCIA_BOOLEANA, SENTENCIA_FOR, SALIDA_ENTRADA,SWITCH, SENTENCIA_SWITCH;
+    ,DO_WHILE,WHILE, FOR,OPERACION, SENTENCIA_BOOLEANA, SENTENCIA_FOR,SALIDA_CONCAT, SALIDA_ENTRADA,SWITCH, SENTENCIA_SWITCH;
 
 start with INICIO;
 
@@ -122,12 +122,15 @@ SENTENCIA_SWITCH ::=
 ;
 
 SALIDA_ENTRADA::= 
-    Cout Doble_Menor Identificador P_coma |
-    Cout Doble_Menor Palabra Doble_Menor Identificador P_coma |
-    Cout Doble_Menor Palabra P_coma |
+    Cout SALIDA_CONCAT P_coma |
     Cin Doble_Mayor Identificador P_coma
 ;
-
+SALIDA_CONCAT ::=
+    Doble_Menor Identificador SALIDA_CONCAT |
+    Doble_Menor Palabra SALIDA_CONCAT |
+    Doble_Menor Palabra |
+    Doble_Menor Identificador
+;
 DECLARACION_FOR ::= 
     Identificador Op_atribucion Numero |
     Identificador Op_incremento | 
