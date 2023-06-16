@@ -45,5 +45,8 @@ int n;
       case 12:
                cout<<"Mes de Diciembre";
       break;
+      default:
+               cout<<"Error";
+      break;
    }
 }
